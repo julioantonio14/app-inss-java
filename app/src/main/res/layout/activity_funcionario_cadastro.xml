@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FuncionarioCadastro">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/logo_inss"
+                    android:layout_gravity="start"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dados do Empregado/a"
+                    android:paddingVertical="12dp"
+                    android:paddingHorizontal="6dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primario"
+                    android:textAlignment="textEnd"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/text_input_material"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                    android:layout_weight="1"
+                    app:hintTextColor="#817f7f">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/bilhete_empregado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_pessoa"
+                        android:hint="Bilhete do empregado"
+                        android:inputType="text"
+                        android:layout_marginRight="3dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/text_input_material"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                    android:layout_weight="1"
+                    app:hintTextColor="#817f7f">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nome Completo"
+                        android:inputType="text"
+                        android:layout_marginLeft="3dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/text_input_material"
+                    android:layout_weight="1"
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/select_profissao"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:padding="16dp"
+                        android:text="Profissão"
+                        android:layout_marginRight="3dp"/>
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/text_input_material"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                    android:layout_weight="1"
+                    app:hintTextColor="#817f7f"
+                    app:prefixText="AOA">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ordenado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ordenado"
+                        android:inputType="number"
+                        android:layout_marginLeft="3dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingHorizontal="8dp"
+                    android:textSize="18dp"
+                    android:text="Contribuição Do Empregador"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/text_input_material"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                    android:layout_weight="1"
+                    app:hintTextColor="#817f7f"
+                    app:suffixText="(8%)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/contri_empregador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Equivale 8%"
+                        android:layout_marginLeft="3dp"
+                        android:textAlignment="textEnd"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:clickable="false" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="4dp"
+                    android:layout_marginTop="4dp"
+                    android:paddingHorizontal="8dp"
+                    android:textSize="18dp"
+                    android:text="Contribuição Do Empregado/a"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxStrokeColor="@color/text_input_material"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded"
+                    android:layout_weight="1"
+                    app:hintTextColor="#817f7f"
+                    app:suffixText="(3%)">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/contri_empregado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Equivale 3%"
+                        android:layout_marginLeft="3dp"
+                        android:textAlignment="textEnd"
+                        android:inputType="none"
+                        android:focusable="false"
+                        android:clickable="false" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="8dp"
+                    android:textSize="18dp"
+                    android:text="Valor Total"/>
+
+                <TextView
+                    android:id="@+id/total_txt_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:textSize="18dp"
+                    android:textAlignment="textEnd"
+                    android:text="10,0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_salvar_imagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_image"
+                    android:onClick="salvarProduto"
+                    android:text="Salvar Registro Criminal"
+                    android:textAllCaps="false"
+                    android:textColor="#050e60"
+                    app:backgroundTint="#fff"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_salvar_fechar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn"
+                    android:onClick="salvarProduto"
+                    android:text="Salvar e Fechar"
+                    android:textAllCaps="false"
+                    android:textColor="#ffff"
+                    app:backgroundTint="#050e60"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="3dp"/>
+
+                <Button
+                    android:id="@+id/btn_continuar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn"
+                    android:onClick="salvarProduto"
+                    android:text="Salvar e Introduzir outro"
+                    android:textAllCaps="false"
+                    android:textColor="#ffff"
+                    app:backgroundTint="#050e60"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

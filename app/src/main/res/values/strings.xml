@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">goangola</string>
+    <string-array name="genero">
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+    <string-array name="civil">
+        <item>Solteiro</item>
+        <item>Casado</item>
+    </string-array>
+    <string-array name="provincias">
+        <item>Bengo</item>
+        <item>Benguela</item>
+        <item>Bié</item>
+        <item>Cabinda</item>
+        <item>Cuando-Cubango</item>
+        <item>Cuanza Norte</item>
+        <item>Cuanza Sul</item>
+        <item>Cunene</item>
+        <item>Huambo</item>
+        <item>Huíla</item>
+        <item>Luanda</item>
+        <item>Lunda Norte</item>
+        <item>Lunda Sul</item>
+        <item>Malanje</item>
+        <item>Moxico</item>
+        <item>Namibe</item>
+        <item>Uíge</item>
+        <item>Zaire</item>
+    </string-array>
+    <string-array name="profissao">
+        <item>Jardineiro</item>
+        <item>Trab. Doméstica</item>
+        <item>Motorista</item>
+    </string-array>
+</resources>
